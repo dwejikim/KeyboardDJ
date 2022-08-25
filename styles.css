@@ -11,5 +11,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    /* background-color: green; */
+    pointer-events: none;
+    /*  allows you to click through the div */
 }

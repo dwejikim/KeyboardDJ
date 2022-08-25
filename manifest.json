@@ -1,47 +1,49 @@
 {
-    "name": "KeyboardDJ",//required
-    "version": "1.0.1",//required
-    "manifest_version": 3,//required
+  "name": "KeyboardDJ",//required
+  "version": "1.0.1",//required
+  "manifest_version": 3,//required
 
-    //recommended
-    "author": "Ji & Tanner",
-    "content_scripts": [
-        {
-          "matches": ["https://www.google.com/"],
-          "css": ["./styles.css"],
-          "js": ["./main.js"]
-        }
-      ],
-      "permissions": [
-        // "scripting",
-        "storage"
-      ],
-      "background": {
-        "service_worker": "./main.js"
-        // "persistent": false
-      },
-      "web_accessible_resources": [{
-       "resources": ["*.wav"],
-       "matches": ["https://www.google.com/*"],
-       "use_dynamic_url": true
-    //    https://github.com/billums123/KeyboardDJ/blob/main/assets/
-        // "bogusFileName.foobar"
-        // {
-        //     "resources": [
-        // "./assets/track1.wav"
-        // // "./assets/track2.wav",
-        // // "./assets/track3.wav",
-        // // "./assets/track4.wav",
-        // // "./assets/closedHiHat.wav",
-        // // "./assets/snare.wav",
-        // // "./assets/bassDrum.wav"
-        //     ],
-        //     "matches": ["https://www.google.com/"]
-        // }
+  //recommended
+  "author": "Ji & Tanner",
+  "content_scripts": [
+      {
+        "matches": ["http://*/*",
+        "https://*/*"],
+        "css": ["./styles.css"],
+        "js": ["./main.js"]
+      }
+    ],
+    "permissions": [
+      // "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "./main.js"
+      // "persistent": false
+    },
+    "web_accessible_resources": [{
+     "resources": ["*.wav"],
+     "matches": ["http://*/*",
+     "https://*/*"],
+     "use_dynamic_url": true
+  //    https://github.com/billums123/KeyboardDJ/blob/main/assets/
+      // "bogusFileName.foobar"
+      // {
+      //     "resources": [
+      // "./assets/track1.wav"
+      // // "./assets/track2.wav",
+      // // "./assets/track3.wav",
+      // // "./assets/track4.wav",
+      // // "./assets/closedHiHat.wav",
+      // // "./assets/snare.wav",
+      // // "./assets/bassDrum.wav"
+      //     ],
+      //     "matches": ["https://www.google.com/"]
+      // }
 }]
-    // "action":{
-        // "description": "latest covid data of UK",
-    //     "default_popup": "index.html",
-    //     "default_title": "Latest Covid Report"
-    // }
+  // "action":{
+      // "description": "latest covid data of UK",
+  //     "default_popup": "index.html",
+  //     "default_title": "Latest Covid Report"
+  // }
 }

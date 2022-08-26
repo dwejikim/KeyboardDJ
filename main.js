@@ -23,7 +23,7 @@
     //initialize single sound audio tags so that chords can be played
     const audioTags = [];
     //change this number to however many sound effects you have
-    const numberOfAudioTags = 14;
+    const numberOfAudioTags = 15;
     const createSingleAudioTags = (numberOfAudioTags) =>{
         for(let i = 0; i < numberOfAudioTags; i++){
 
@@ -139,6 +139,8 @@
                     break;
                 case "KeyB":
                     updateSingleAudio(11, "crash")
+                case "KeyN":
+                    updateSingleAudio(12, "ride")
                     break;
             }
         }
